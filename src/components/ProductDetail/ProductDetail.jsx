@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../context/cartContex';
 import './ProductDetail.css';
 
 
@@ -12,7 +13,14 @@ function ProductDetail(props) {
   }
   const restar=()=>{
     setCantidad(cantidad-1)
+  } 
+
+  const {addProduct}=useCartContext()
+
+  const agregar=()=>{
+    addProduct({...props.item, cantidad})
   }
+  
   return (
     <Card className="CardItem" >
       <Card.Img variant="top" src={props.item.pic} />
@@ -22,7 +30,7 @@ function ProductDetail(props) {
           <p>Categoria {props.item.category}</p><p>Precio ${props.item.price}</p>
         </Card.Text>
           <Button onClick={restar} disabled={cantidad===0}>-</Button>
-          <Button>Agregar</Button>
+          <Button onClick={agregar} disabled={cantidad===0}>Agregar</Button>
           <Button onClick={sumar}>+</Button>
           <i>{cantidad}</i>
           
