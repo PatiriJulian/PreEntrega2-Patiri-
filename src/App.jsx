@@ -5,6 +5,7 @@ import ItemListContainer from './components/Sections/ItemListContainer';
 import './components/Sections/ItemListContainer.css'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import ItemDetail from './components/Sections/ItemDetail';
+import { CartContextProvider } from './context/cartContex';
 
  
 function App() {
@@ -12,6 +13,7 @@ function App() {
   return (
     <> 
       <BrowserRouter>
+      <CartContextProvider>
         <NavBar/>
         
           <section class="ItemListContainerWrapper ItemListContainerfont">
@@ -21,7 +23,7 @@ function App() {
               <Route path='/categoria/:category' element={<ItemListContainer/>}/>
             </Routes>
           </section>
-        
+          </CartContextProvider>
       </BrowserRouter>
     </>
   )
