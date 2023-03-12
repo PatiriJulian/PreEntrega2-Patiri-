@@ -1,0 +1,22 @@
+.CardItem {
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.CardTitle {
+    font-size: 25px;
+    font-family: Outfit;
+    color: #7286D3;
+}
+
+.CardText {
+    font-size: 20px;
+    font-family: Outfit;
+    color: #000;
+}
+
+.CardButton{
+    float: right;
+    color: #7286D3;
+    
+}
