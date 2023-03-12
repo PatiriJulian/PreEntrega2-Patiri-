@@ -14,8 +14,8 @@ export const CartContextProvider = ({children}) =>{
         setCartList([...cartList,producto])
     }
 
-    //total va a retornar la cantidad total de items
-    const total=()=>{
+    //contar va a retornar la cantidad total de items
+    const contar=()=>{
         return cartList.reduce( (count, producto) => count += producto.cantidad, 0)
     }
 
@@ -27,12 +27,24 @@ export const CartContextProvider = ({children}) =>{
         setCartList(newList)
     }
 
+    //vaciarItems va a resetear la lista de items
+    const vaciarItems=()=>{
+        setCartList([])
+    }
+
+    //total va a devolver el monto total a pagar
+    const total=()=>{
+        return cartList.reduce((t, producto) => t += producto.cantidad * producto.price, 0)
+    }
+
     return(
         <CartContext.Provider value={{
             cartList,
             addProduct,
-            total,
+            contar,
             borrarItem,
+            vaciarItems,
+            total,
 
         }}>
             {children}

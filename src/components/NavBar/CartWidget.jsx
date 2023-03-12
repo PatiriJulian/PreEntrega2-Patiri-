@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 
 function CartWidget () {
-    const{total} = useCartContext()
-    const mostrarTotal=total()>0
+    const{contar} = useCartContext()
+    const mostrarTotal=contar()>0
     return(
         <div class= "CartWidget">
-            {mostrarTotal ? <i class="numero">{total()}</i> : <></> }
+            {mostrarTotal ? <i class="numero">{contar()}</i> : <></> }
             <Link to='/carrito'><FaShoppingCart/></Link>
         </div> 
 
