@@ -1,4 +1,4 @@
-# PreEntrega2-Patiri
+# PreEntrega3-Patiri
 
 Segunda PreEntrega del curso de ReacJS de CODERHOUSE Comisión 39550 en el año 2023.
 
