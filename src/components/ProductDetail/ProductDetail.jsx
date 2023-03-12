@@ -7,7 +7,7 @@ import './ProductDetail.css';
 
 
 function ProductDetail(props) {
-  const [cantidad, setCantidad]=useState(0);
+  const [cantidad, setCantidad]=useState(1);
   const sumar=()=>{
     setCantidad(cantidad+1)
   }

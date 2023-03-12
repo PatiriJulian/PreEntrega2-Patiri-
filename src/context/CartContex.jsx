@@ -19,11 +19,20 @@ export const CartContextProvider = ({children}) =>{
         return cartList.reduce( (count, producto) => count += producto.cantidad, 0)
     }
 
+    //borrarItem va a remover un item del carrito por 
+    const borrarItem=(id)=>{
+        const newList=cartList.filter((item) =>{
+            return item.id !==id
+        });
+        setCartList(newList)
+    }
+
     return(
         <CartContext.Provider value={{
             cartList,
             addProduct,
             total,
+            borrarItem,
 
         }}>
             {children}
