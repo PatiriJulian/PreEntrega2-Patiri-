@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
-import {collection, getDocs, getFirestore} from 'firebase/firestore'
+import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore'
 import { useParams } from "react-router-dom";
 import CardItem from "../CardItem/CardItem"
 import Loading from "../Loading/Loading";
 
 
 
-function ItemListContainer(props) {
+function CategoryContainer(props) {
     
     const [items, setItems] =useState([]);
     const {category} =useParams()
@@ -14,14 +14,15 @@ function ItemListContainer(props) {
     useEffect(()=>{
         const db = getFirestore()
         const queryCollection = collection(db, 'Productos')
-        getDocs(queryCollection)
+        const queryFilter = query(queryCollection, where('category','==',category))
+        getDocs(queryFilter)
         .then(respCollection => {
             setItems(respCollection.docs.map((prod)=>{
                 return {id:prod.id,...prod.data()}
             }))
             setLoading(false)
         })
-    },[])
+    },[category])
     
     return (
         <>
@@ -29,13 +30,7 @@ function ItemListContainer(props) {
         <Loading/> 
         :
         <>
-            {items.filter((producto)=>{
-            if (category){
-                return category===producto.category
-            }else {
-                return true
-            }
-            }).map(function(item){
+            {items.map(function(item){
                 return <CardItem item={item}/>
             })}
        </> }
@@ -45,4 +40,4 @@ function ItemListContainer(props) {
     )
 
 }
-export default ItemListContainer
+export default CategoryContainer;
