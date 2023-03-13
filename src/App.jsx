@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import ItemDetail from './components/Sections/ItemDetail';
-import { CartContextProvider } from './context/cartContex';
+import { CartContextProvider } from './context/CartContex';
 import Cart from './components/Sections/Cart';
 import CategoryContainer from './components/Sections/CategoryContainer';
 import HomeContainer from './components/Sections/HomeContainer';
