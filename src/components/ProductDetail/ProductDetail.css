@@ -1,22 +1,39 @@
-.CardItem {
-    width: 20rem;
-    margin-bottom: 1rem;
+.ContenedorDetail{
+    display: flex;
+    justify-content: space-around;
 }
 
-.CardTitle {
-    font-size: 25px;
-    font-family: Outfit;
+.ContenedorImgDetail{
+    width: auto;
+    margin-right: 15px;
+}
+
+.TituloDetail{
     color: #7286D3;
+    font-family: Outfit;
+    font-size: 50px;
 }
 
-.CardText {
-    font-size: 20px;
-    font-family: Outfit;
+.CategoriaDetail{
     color: #000;
 }
 
-.CardButton{
-    float: right;
-    color: #7286D3;
+.ImgDetail{
+    width: 400px;
+    border-radius: 2%;
+}
+
+.ContenedorCompra{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ButtonAgregar{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    
     
 }

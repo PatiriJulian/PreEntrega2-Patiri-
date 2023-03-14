@@ -22,20 +22,25 @@ function ProductDetail(props) {
   }
   
   return (
-    <Card className="CardItem" >
-      <Card.Img variant="top" src={props.item.pic} />
-      <Card.Body>
-        <Card.Title  class= "CardTitle">{props.item.name}</Card.Title>
-        <Card.Text class= "CardText">
-          <p>Categoria {props.item.category}</p><p>Precio ${props.item.price}</p>
-        </Card.Text>
-          <Button onClick={restar} disabled={cantidad===0}>-</Button>
-          <Button onClick={agregar} disabled={cantidad===0}>Agregar</Button>
-          <Button onClick={sumar}>+</Button>
-          <i>{cantidad}</i>
-          
-      </Card.Body>
-    </Card>
+    <div className='ContenedorDetail'>
+      <div className='ContenedorImgDetail'>
+        <h1 className='TituloDetail'>{props.item.name}</h1>
+        <p className='CategoriaDetail'>Categoria: {props.item.category}</p>
+        <p className='CategoriaDetail'>Precio: ${props.item.price}</p>
+        <img className='ImgDetail' src={props.item.pic} alt="" />
+      </div>
+      <div className='ContenedorCompra'>
+        <div>
+        <p>Agregar al carrito {cantidad} Productos</p>
+          <div className='ButtonAgregar'>
+            <Button onClick={sumar}>+</Button>
+            <Button onClick={agregar} disabled={cantidad===0}>Agregar</Button>
+            <Button onClick={restar} disabled={cantidad===0}>-</Button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   );
 }
 
