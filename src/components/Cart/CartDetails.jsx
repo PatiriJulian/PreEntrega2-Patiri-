@@ -1,8 +1,8 @@
-import { useCartContext } from "../../context/CartContext";
-import Button from 'react-bootstrap/Button';
 
+import Button from 'react-bootstrap/Button';
+import { useCartContext } from "../../context/CartContext";
 function CartDetails(){
-    const {cartList, borrarItem, total}=useCartContext ()
+    const {cartList, borrarItem, total}=useCartContext ();
     return (<> 
         <ul>
             {cartList.map (function(item){

@@ -2,7 +2,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useCartContext } from "../../context/CartContex";
+import { useCartContext } from "../../context/CartContext";
 import CartDetails from "../Cart/CartDetails";
 import Formulario from "../Formulario/Formulario";
 
