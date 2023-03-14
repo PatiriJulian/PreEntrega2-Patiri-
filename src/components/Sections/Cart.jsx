@@ -10,7 +10,7 @@ import './Cart.css'
 
 function Cart(){
     const [orderId, setOrderId] = useState()
-    const {contar, vaciarItems, total, cartList} =useCartContext ()
+    const {contar, total, cartList} =useCartContext ()
     const hayProductos=contar()>0
     const generarOrden = (datos)=>{
         const order= {}
@@ -39,8 +39,8 @@ function Cart(){
                     <p><Link to='/'> Click aqui para ir al home </Link></p> 
                 </> : 
                 <> 
-                     <CartDetails/>
-                    <div><Button onClick={()=>vaciarItems()}>Vaciar Carrito</Button></div>
+                    <CartDetails/>
+                    
                     <Formulario enviar={generarOrden}/> 
                     
                 </> } 

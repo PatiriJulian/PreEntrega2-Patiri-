@@ -25,13 +25,14 @@ function ProductDetail(props) {
     <div className='ContenedorDetail'>
       <div className='ContenedorImgDetail'>
         <h1 className='TituloDetail'>{props.item.name}</h1>
-        <p className='CategoriaDetail'>Categoria: {props.item.category}</p>
-        <p className='CategoriaDetail'>Precio: ${props.item.price}</p>
+        
         <img className='ImgDetail' src={props.item.pic} alt="" />
       </div>
       <div className='ContenedorCompra'>
         <div>
-        <p>Agregar al carrito {cantidad} Productos</p>
+        <p className='CategoriaDetail'>Categoria: {props.item.category}</p>
+        <p className='CategoriaDetail'>Precio: ${props.item.price}</p>
+        <p className='CategoriaDetail separador'>Agregar al carrito {cantidad} Productos</p>
           <div className='ButtonAgregar'>
             <Button onClick={sumar}>+</Button>
             <Button onClick={agregar} disabled={cantidad===0}>Agregar</Button>

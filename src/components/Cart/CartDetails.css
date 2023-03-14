@@ -1,5 +1,6 @@
 .CartDetailUl{
     list-style: none;
+    padding: 0;
 }
 
 .CartDetailLi {
@@ -27,4 +28,14 @@
 
 .CartDetailButton:hover{
     background-color: brown;
+}
+
+.CartDetailsPrecio{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.CartDetailP{
+    text-align: right;
 }

@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import { useCartContext } from "../../context/CartContext";
 import './CartDetails.css'
 function CartDetails(){
-    const {cartList, borrarItem, total}=useCartContext ();
+    const {cartList,vaciarItems, borrarItem, total}=useCartContext ();
     return (<> 
         <ul className='CartDetailUl'>
             {cartList.map (function(item){
@@ -13,14 +13,18 @@ function CartDetails(){
                             <img className='imgCartDetails' src={item.pic}/>
                         </div>
                         <div>
-                            {item.name}, Cantidad: {item.cantidad} <Button className='CartDetailButton' onClick={()=> borrarItem(item.id)}>Borrar</Button>
+                            {item.name}, Cantidad: {item.cantidad} <Button className='CartDetailButton' onClick={()=> borrarItem(item.id)}>Quitar</Button>
                         </div>
                     </div>
                     </li>
                     
             })}
         </ul>
-        <p>Total:$ {total()}</p>
+        <div className='CartDetailsPrecio'>
+            <div><Button onClick={()=>vaciarItems()}>Vaciar Carrito</Button></div>
+            <div className='CartDetailP'>Total:$ {total()}</div>
+        </div>
+        
     </>) 
 }
 
