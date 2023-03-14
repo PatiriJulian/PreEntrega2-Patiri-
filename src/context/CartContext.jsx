@@ -11,6 +11,16 @@ export const CartContextProvider = ({children}) =>{
 
     //addProduct va a agregar un producto a cartList
     const addProduct=(producto)=>{
+        const productIndex = cartList.findIndex ((item)=>{
+            return item.id===producto.id
+        })
+        console.log(producto, cartList, productIndex)
+        if(productIndex!==-1){
+            cartList[productIndex].cantidad += producto.cantidad
+            setCartList([...cartList])
+            return 
+        }
+
         setCartList([...cartList,producto])
     }
 
