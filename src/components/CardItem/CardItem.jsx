@@ -7,7 +7,7 @@ import './CardItem.css';
 function CardItem(props) {
   return (
     <Card className="CardItem" >
-      <Link to={`/producto/${props.item.id}`}><Card.Img variant="top" src={props.item.pic} /></Link>
+      <Link className='imgCard' to={`/producto/${props.item.id}`}><Card.Img variant="top" src={props.item.pic} /></Link>
       <Card.Body>
         <Card.Title  class= "CardTitle">{props.item.name}</Card.Title>
         <Card.Text class= "CardText">

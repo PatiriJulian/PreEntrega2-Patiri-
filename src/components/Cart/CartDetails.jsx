@@ -5,9 +5,19 @@ import './CartDetails.css'
 function CartDetails(){
     const {cartList, borrarItem, total}=useCartContext ();
     return (<> 
-        <ul>
+        <ul className='CartDetailUl'>
             {cartList.map (function(item){
-                return <li><img className='imgCartDetails' src={item.pic}/>{item.name}, Cantidad: {item.cantidad}  <Button onClick={()=> borrarItem(item.id)}>Borrar</Button></li>
+                return <li className='CartDetailLi'>
+                    <div className='CartDetailLiContainer'>
+                        <div>
+                            <img className='imgCartDetails' src={item.pic}/>
+                        </div>
+                        <div>
+                            {item.name}, Cantidad: {item.cantidad} <Button className='CartDetailButton' onClick={()=> borrarItem(item.id)}>Borrar</Button>
+                        </div>
+                    </div>
+                    </li>
+                    
             })}
         </ul>
         <p>Total:$ {total()}</p>

@@ -3,6 +3,13 @@
     margin-bottom: 1rem;
 }
 
+.imgCard:hover{
+    z-index:1;
+	filter:alpha(opacity=70);
+	-moz-opacity:.70;
+	opacity:.70;
+}
+
 .CardTitle {
     font-size: 25px;
     font-family: Outfit;

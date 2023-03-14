@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import CartDetails from "../Cart/CartDetails";
 import Formulario from "../Formulario/Formulario";
+import './Cart.css'
 
 
 function Cart(){

@@ -1,8 +1,30 @@
-ul{
+.CartDetailUl{
     list-style: none;
+}
+
+.CartDetailLi {
+    margin: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 0.375rem;
+    padding: 5px;
 }
 
 .imgCartDetails{
     height: 200px;
     border-radius: 4%;
+}
+
+.CartDetailLiContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.CartDetailButton {
+    margin-left: 5px;
+    background-color: brown;
+    border-color: black;
+}
+
+.CartDetailButton:hover{
+    background-color: brown;
 }
