@@ -12,7 +12,7 @@ function CartDetails(){
                         <div>
                             <img className='imgCartDetails' src={item.pic}/>
                         </div>
-                        <div>
+                        <div className='CartItemAcction'>
                             {item.name}, Cantidad: {item.cantidad} <Button className='CartDetailButton' onClick={()=> borrarItem(item.id)}>Quitar</Button>
                         </div>
                     </div>

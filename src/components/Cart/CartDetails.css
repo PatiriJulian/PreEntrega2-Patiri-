@@ -39,3 +39,7 @@
 .CartDetailP{
     text-align: right;
 }
+
+.CartItemAcction{
+    align-self: flex-end;
+}
