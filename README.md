@@ -1,8 +1,9 @@
 # PreEntrega3-Patiri
 
-Segunda PreEntrega del curso de ReacJS de CODERHOUSE Comisión 39550 en el año 2023.
+Entrega final del curso de ReacJS de CODERHOUSE Comisión 39550 en el año 2023.
 
-Preview [vercel](https://pre-entrega2-patiri.vercel.app)
+Repositorio en [GitHub](https://github.com/PatiriJulian/PreEntrega3-Patiri)
+Preview [vercel](pre-entrega3-patiri.vercel.app)
 
 Se agrega GIF con la animacion de como funciona la app (Demo.gif)
 
