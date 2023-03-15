@@ -1,4 +1,4 @@
-.CartDetailUl{
+.CartDetailUl {
     list-style: none;
     padding: 0;
 }
@@ -10,7 +10,7 @@
     padding: 5px;
 }
 
-.imgCartDetails{
+.imgCartDetails {
     height: 200px;
     border-radius: 4%;
 }
@@ -26,20 +26,20 @@
     border-color: black;
 }
 
-.CartDetailButton:hover{
+.CartDetailButton:hover {
     background-color: brown;
 }
 
-.CartDetailsPrecio{
+.CartDetailsPrecio {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
 
-.CartDetailP{
+.CartDetailP {
     text-align: right;
 }
 
-.CartItemAcction{
+.CartItemAcction {
     align-self: flex-end;
 }

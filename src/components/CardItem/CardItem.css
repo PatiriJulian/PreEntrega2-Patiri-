@@ -3,11 +3,11 @@
     margin-bottom: 1rem;
 }
 
-.imgCard:hover{
-    z-index:1;
-	filter:alpha(opacity=70);
-	-moz-opacity:.70;
-	opacity:.70;
+.imgCard:hover {
+    z-index: 1;
+    filter: alpha(opacity=70);
+    -moz-opacity: .70;
+    opacity: .70;
 }
 
 .CardTitle {
@@ -22,8 +22,8 @@
     color: #000;
 }
 
-.CardButton{
+.CardButton {
     float: right;
     color: #7286D3;
-    
+
 }

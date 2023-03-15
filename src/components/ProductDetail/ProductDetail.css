@@ -1,4 +1,4 @@
-.ContenedorDetail{
+.ContenedorDetail {
     width: 65%;
     padding: 0.5rem;
     display: flex;
@@ -8,18 +8,18 @@
     margin-bottom: 15px;
 }
 
-.ContenedorImgDetail{
+.ContenedorImgDetail {
     width: auto;
     margin-right: 15px;
 }
 
-.TituloDetail{
+.TituloDetail {
     color: #7286D3;
     font-family: Outfit;
-    font-size: 2vw ;
+    font-size: 2vw;
 }
 
-.CategoriaDetail{
+.CategoriaDetail {
     color: #000;
     font-size: 1vw;
     margin: 0;
@@ -30,14 +30,14 @@
     font-size: 1.3vw;
 }
 
-.ImgDetail{
+.ImgDetail {
     max-width: 100%;
     width: 310px;
     border-radius: 2%;
 
 }
 
-.ContenedorCompra{
+.ContenedorCompra {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -45,10 +45,10 @@
     margin-right: 5%;
 }
 
-.ButtonAgregar{
+.ButtonAgregar {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
-    
-    
+
+
 }

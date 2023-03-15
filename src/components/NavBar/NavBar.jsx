@@ -1,11 +1,11 @@
-import CartWidget from "./CartWidget"
-import './NavBar.css'
-import logo from '../../assets/logo.png';
 import { Link } from "react-router-dom";
+import logo from '../../assets/logo.png';
+import CartWidget from "./CartWidget";
+import './NavBar.css';
 
-function NavBar () {
+function NavBar() {
 
-  return(
+  return (
     <header class="header NavBarFont">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid NavBarWrapper">
@@ -21,9 +21,9 @@ function NavBar () {
               <li class="nav-item">
                 <Link class="nav-link" to="/categoria/Camisas">Camisas</Link>
               </li>
-            </ul>            
+            </ul>
           </div>
-          <CartWidget/>
+          <CartWidget />
         </div>
       </nav>
     </header>

@@ -1,7 +1,7 @@
 import Spinner from 'react-bootstrap/Spinner';
 
-function Loading () {
-    return(
+function Loading() {
+    return (
         <Spinner animation="border" role="status">
             <span className="visually-hidden">Cargando</span>
         </Spinner>
