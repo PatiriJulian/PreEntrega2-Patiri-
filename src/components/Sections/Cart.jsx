@@ -10,7 +10,7 @@ import './Cart.css'
 
 function Cart(){
     const [orderId, setOrderId] = useState()
-    const {contar, total, cartList} =useCartContext ()
+    const {contar,vaciarItems, total, cartList} =useCartContext ()
     const hayProductos=contar()>0
     const generarOrden = (datos)=>{
         const order= {}
